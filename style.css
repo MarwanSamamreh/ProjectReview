@@ -412,11 +412,11 @@ footer ion-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 50px;
 }
 #lessons {
   background: var(--bg_default);
   border: Solid 0.5px var(--lines-color);
-
   border-left: solid 1px var(--lines-color);
   display: flex;
   flex-wrap: wrap;
