@@ -1,0 +1,570 @@
+:root[data-theme="light"] {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+}
+
+:root[data-theme="dark"] {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #1a1a1a;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #ededed;
+  --heart-color: #dc143c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+  max-width: 1920px;
+}
+
+header {
+  background: var(--bg_default);
+  height: 22vh;
+  padding: 0px;
+  max-width: 1920px;
+}
+
+body {
+  background-color: var(--bg_body);
+  color: var(--body-text);
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  background-color: var(--bg_default);
+  display: flex;
+  justify-content: space-between;
+}
+
+header ion-icon {
+  font-size: 15px;
+  padding: 0;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.logo {
+  color: var(--brand-primary);
+  margin: 45px;
+}
+
+nav .btns {
+  justify-content: center;
+  justify-content: end;
+  margin: 40px;
+}
+
+#darkBtn {
+  align-items: center;
+}
+#favBtn {
+  align-items: center;
+}
+
+button {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  color: var(--body-text);
+  width: 110px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid var(--bg_body);
+  background-color: var(--bg_default);
+  cursor: pointer;
+  transform: all 0.2s ease;
+}
+
+.triangle1 {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background-image: linear-gradient(
+    to right,
+    #0768ac,
+    #0768ac,
+    transparent 80%
+  );
+  clip-path: polygon(0% 0%, 0% 100%, 100% 0%); /* Defines the triangle shape */
+  z-index: 2;
+}
+
+.triangle2 {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 100vw;
+  height: 50px;
+  background-image: linear-gradient(to left, #03c180, #03c180, transparent 90%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%
+  ); /* Defines the triangle shape */
+  z-index: 1;
+}
+
+.web-header {
+  position: relative;
+  color: var(--brand-secondary);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg_default);
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.web-header p {
+  color: var(--body-text);
+}
+
+.searchContainer {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg_body);
+  border-radius: 55px;
+}
+
+.search-bar {
+  background: var(--bg_default);
+  width: 100%;
+  margin: 0px 45px;
+  display: flex;
+  padding: 2px;
+  border-radius: 10px;
+  border: solid 1px var(--lines-color);
+  box-shadow: 0px 0px 1px 0px var(--lines-color);
+}
+
+.search-bar input {
+  color: var(--body-text);
+  background-color: var(--bg_default);
+  padding: 10px 25px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.search-icon {
+  font-size: 30px;
+  padding: 0px;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.searchResult {
+  margin: 10px 45px;
+}
+
+#filter {
+  background: var(--bg_default);
+  border-left: solid 1px var(--lines-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  padding: 10px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/*=================== PROBLEM =================*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  max-width: 100%;
+  margin-left: 40px;
+}
+
+.gallery a {
+  text-decoration: none;
+  color: var(--body-text);
+}
+
+.content {
+  width: calc(20% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--bg_default);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px var(--lines-color);
+  transition: 0.4s;
+  background: var(--bg_default);
+}
+
+.content:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+}
+
+img {
+  background-color: white;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  margin-top: -10px;
+  display: block;
+}
+
+.content P {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: -15px;
+}
+
+.content h3 {
+  margin-top: 15px;
+  text-align: left;
+  margin-left: 10px;
+  padding-top: 0px;
+}
+.content h4 {
+  text-align: left;
+  margin-left: 10px;
+  font-weight: lighter;
+  margin-top: 30px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  color: var(--body-text);
+  align-items: left;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+ul ion-icon {
+  color: orange;
+}
+
+#favBar {
+  position: fixed;
+  bottom: 0;
+  background: var(--bg_default);
+  height: 15vh;
+  width: 100%;
+  display: none;
+  border-top: var(--lines-color);
+  box-shadow: 0px 0px 5px 0px #333333;
+}
+
+footer {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+footer ion-icon {
+  color: var(--heart-color);
+}
+
+#favBar h4 {
+  margin-top: 5px;
+  margin-left: 50px;
+}
+
+.favGallery {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: left;
+  align-items: left;
+  margin-top: 10px;
+  margin-left: 40px;
+  align-items: left;
+}
+.favContent {
+  margin: 10px;
+
+  width: 100px;
+  height: 80px;
+
+  box-sizing: content-box;
+  text-align: left;
+  border-radius: 10px;
+  cursor: pointer;
+
+  box-shadow: 0 14px 28px var(--lines-color);
+  transition: 0.4s;
+  background: var(--bg_default);
+}
+.favContent img {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.favContent h5 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+.favContent ul {
+  font-size: 13px;
+  margin-top: -3px;
+  margin-left: 4px;
+}
+
+/*---------------------------Course Page--------------------*/
+.course {
+  background: var(--body-text);
+  height: 25vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  justify-items: center;
+  text-justify: left;
+}
+
+.details {
+  margin: 20px;
+  width: 40%;
+  color: var(--bg_default);
+}
+
+.details h5 {
+  color: var(--brand-secondary);
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 40vh;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--lines-color);
+  overflow: hidden;
+  background: var(--bg_default);
+}
+
+.course-card img {
+  width: 100%;
+  height: 50%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--body-text);
+  width: 80%;
+  padding: 10px;
+  margin-top: 80px;
+  box-sizing: border-box;
+  border: 2px solid var(--bg_body);
+  background: var(--bg_default);
+}
+
+.box button {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  color: var(--bg_default);
+  background: var(--brand-secondary);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details .topics {
+  margin-top: 60px;
+
+  color: var(--body-text);
+}
+.lesson-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#lessons {
+  background: var(--bg_default);
+  border: Solid 0.5px var(--lines-color);
+
+  border-left: solid 1px var(--lines-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  width: 450px;
+  padding: 10px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+#lessons ion-icon {
+  margin-right: 15px;
+  color: #03c180;
+}
+/*--------------------- responsive ---------------*/
+
+@media (max-width: 1200px) {
+  .logo {
+    margin: 40px;
+  }
+
+  nav .btns {
+    margin: 40px;
+  }
+
+  #darkBtn,
+  #favBtn {
+    margin: 0 5px;
+  }
+
+  .web-header {
+    margin-top: 50px;
+  }
+
+  .gallery {
+    margin: 0 10px;
+  }
+  img {
+    height: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 10px;
+  }
+
+  nav .btns {
+    margin-top: -10px;
+    margin-bottom: 50px;
+  }
+
+  #darkBtn,
+  #favBtn {
+    margin: 5px 0;
+  }
+
+  .web-header {
+    padding: 5px;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .searchContainer {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    margin-top: 2;
+    max-width: 80%;
+  }
+
+  .search-icon {
+    font-size: 4rem;
+    margin-bottom: 5px;
+  }
+
+  .gallery {
+    width: 85%;
+    margin-left: 30px;
+  }
+
+  .content {
+    width: 100%;
+  }
+  img {
+    height: 30%;
+  }
+}
+
+@media (max-width: 360px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 10px;
+  }
+
+  nav .btns {
+    margin-top: -10px;
+    margin-bottom: 50px;
+  }
+
+  #darkBtn,
+  #favBtn {
+    margin: 5px 0;
+  }
+
+  .web-header {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .searchContainer {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    max-width: 80%;
+  }
+
+  .search-icon {
+    font-size: 4rem;
+    margin-bottom: 5px;
+  }
+
+  .gallery {
+    width: 90%;
+    margin-left: 30px;
+  }
+  .content {
+    width: 100%;
+  }
+  img {
+    height: 30%;
+  }
+}
