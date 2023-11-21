@@ -32,9 +32,6 @@ header {
 body {
   background-color: var(--bg_body);
   color: var(--body-text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 nav {
