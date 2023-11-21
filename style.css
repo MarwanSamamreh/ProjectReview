@@ -32,6 +32,9 @@ header {
 body {
   background-color: var(--bg_body);
   color: var(--body-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 nav {
@@ -279,6 +282,7 @@ ul ion-icon {
 }
 
 footer {
+  display: flex;
   justify-content: center;
   text-align: center;
   margin-bottom: 50px;
@@ -338,46 +342,45 @@ footer ion-icon {
 }
 
 /*---------------------------Course Page--------------------*/
-.course {
-  background: red;
-}
-.course-details {
-  background: green;
 
+.grey-area {
+  position: absolute;
+  z-index: -1;
+  background-color: var(--body-text);
+  width: 100vw;
+  height: 28vh;
+}
+
+.course {
+  white-space: wrap;
+  margin-right: 300px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.course-info {
-  background: var(--body-text);
-  padding: 15px;
-  height: 25vh;
-  justify-content: center;
-  justify-items: center;
   text-justify: left;
-  width: 100%;
-  color: var(--bg_default);
 }
 
-.course-info h5 {
+.details {
+  color: var(--bg_default);
+  padding: 5px;
+  margin: 10px 0;
+  width: 510px;
+}
+
+.details h5 {
+  margin: 5px 0;
   color: var(--brand-secondary);
 }
-/* 
-.info {
-  
+
+.details h3 {
+  margin: 2px 0;
 }
 
-.info .topics {
-  margin-top: 60px;
-
-  color: var(--body-text);
-} */
-.course-lessons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.details ul {
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .lessons {
@@ -389,63 +392,92 @@ footer ion-icon {
   flex-wrap: wrap;
   align-items: center;
   justify-content: left;
-  width: 450px;
+  width: 500px;
   padding: 10px 10px;
   cursor: pointer;
   position: relative;
 }
-
+.lessons-container {
+  margin-top: 45px;
+  margin-bottom: 30px;
+  margin-right: 5px;
+}
 .lessons ion-icon {
   margin-right: 15px;
   color: #03c180;
 }
 
-.course-card {
-  display: absolute;
+.cta-card {
+  margin: 5px;
+  background-color: var(--bg_default);
+  position: absolute;
+  z-index: 2;
+  width: 275px;
+  height: 375px;
+  border: 2px solid var(--bg_default);
+  justify-content: center;
+  /* Centering */
+  top: 45%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 2px 2px var(--lines-color);
+}
+
+.cta-card img {
+  margin: 2px;
+  width: 100%;
+  height: 45%;
+}
+
+.cta-card h4 {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.cta-box h4 {
+  text-wrap: nowrap;
+  font-weight: bold;
+  font-size: 20;
+  margin-left: -20px;
+  margin: 5px;
+}
+.cta-box h5 {
+  padding-top: 10px;
+  align-self: center;
+  font-weight: normal;
+}
+.cta-box {
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 15%;
-  right: 50%;
-  height: 40vh;
-  margin: 10px;
-  box-sizing: border-box;
-  border: 1px solid var(--lines-color);
-  overflow: hidden;
-  background: var(--bg_default);
-}
-
-.course-card img {
-  width: 100%;
-  height: 50%;
-}
-
-.box {
-  display: relative;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: left;
   color: var(--body-text);
-  width: 80%;
-  padding: 10px;
-  margin-top: 80px;
-  box-sizing: border-box;
-  border: 2px solid var(--bg_body);
+  width: 90%;
+
+  padding: 10px 16px;
+  margin: auto;
+  margin-top: 10px;
+  border: 1px solid var(--lines-color);
   background: var(--bg_default);
 }
 
-.box button {
+.cta-box button {
   display: flex;
-  height: 40px;
+  border-radius: 0;
+  height: 55px;
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   font-size: 16px;
   text-align: center;
   align-items: center;
   color: var(--bg_default);
   background: var(--brand-secondary);
 }
-
+.add-fav ion-icon {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 5px;
+}
 /*--------------------- responsive ---------------*/
 
 @media (max-width: 1200px) {
