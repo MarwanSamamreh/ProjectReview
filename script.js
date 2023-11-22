@@ -10,6 +10,6 @@ const switchTheme = () => {
 document.querySelector("#darkBtn").addEventListener("click", switchTheme);
 
 function showFav() {
-  let x = document.getElementById("favBar");
+  let x = document.getElementById("favbar");
   x.style.display = x.style.display === "none" ? "block " : "none";
 }
