@@ -110,7 +110,8 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 15px;
 }
 
 .web-header p {
@@ -194,7 +195,7 @@ button {
 .gallery {
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 25px 50px;
 }
 
@@ -344,6 +345,7 @@ footer ion-icon {
 .details-page {
   display: flex;
   justify-content: center;
+  margin: 0 50px;
 }
 .course {
   white-space: wrap;
@@ -497,7 +499,7 @@ footer ion-icon {
   }
 
   .web-header {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .triangle1,
@@ -511,7 +513,6 @@ footer ion-icon {
   nav .btns {
     display: flex;
     flex-direction: row;
-
     max-width: 70px;
     height: 40px;
     font-size: 12px;
@@ -535,9 +536,8 @@ footer ion-icon {
   }
 
   .web-header {
-    width: 75%;
-    padding: 5px;
-    margin: 30px 50px;
+    padding-top: 35px;
+    margin: 0px 50px;
     flex-direction: column;
     align-items: left;
     text-align: left;
@@ -606,40 +606,34 @@ footer ion-icon {
     margin-top: 5px;
   }
   .details-page {
-    width: 100%;
-    flex-wrap: wrap;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .course {
-    justify-content: center;
-    margin: 0 50px;
+    width: 100%;
   }
   .details {
-    width: 320px;
+    width: 100%;
   }
+
   .lessons-container {
-    margin: 10px 0;
+    width: 100%;
   }
+
   .lessons {
+    width: 100%;
     justify-content: left;
-
-    width: 320px;
-  }
-
-  .lessons p {
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .grey-area {
-    height: 290px;
-    width: 100%;
+    height: 240px;
   }
+
   .cta-card {
     margin: 0 50px;
   }
