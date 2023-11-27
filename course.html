@@ -21,10 +21,10 @@
         <h1 class="logo">Web Topics</h1>
         <section class="btns">
           <button id="darkBtn" href="#">
-            <ion-icon name="moon-outline"></ion-icon> Dark Mode
+            <ion-icon name="moon-outline"></ion-icon> <span>Dark Mode</span>
           </button>
           <button onclick="showFav()" id="favBtn">
-            <ion-icon name="heart-outline"></ion-icon> Favourites
+            <ion-icon name="heart-outline"></ion-icon> <span>Favourites </span>
           </button> 
       </nav>
         <section class="triangle1"></section>
@@ -38,6 +38,7 @@
     </header>
     <main>
       <section class="grey-area"></section>
+      <section class="details-page">
       <section class="course">
         <section class="details-container">
       <section class="details">
@@ -95,12 +96,15 @@
     <img src="images/html.png" />
     <h3>HTML by <a href=""> Sarah Smith</a></h3>
     <section class="cta-box">
+      <section class="cta-box-content">
       <h4>Intrested about this topic?</h4>
     <button class="add-fav">Add to Favourites<ion-icon name="heart-outline"></ion-icon></button>
     <h5>Unlimited Credits</h5>
   </section>
+  </section>
 
   </section>
+</section>
 
   </main>
   <footer>
@@ -108,10 +112,14 @@
   </footer>
   <section class="fav-bar" id='favbar'>
     <h4>My Favourite Topics</h4>
+
     <section class="favGallery">
-      <section class="favContent">
+
+      <section class="fav-card">
         <img src="images/react.webp" />
-        <h5>React</h5>
+
+        <section class="course-title">React</section>
+        <section class="stars">
         <ul>
           <li><ion-icon name="star"></ion-icon></li>
           <li><ion-icon name="star"></ion-icon></li>
@@ -120,18 +128,27 @@
           <li><ion-icon name="star-outline"></ion-icon></li>
         </ul>
       </section>
-      <section class="favContent">
+        
+      </section>
+
+      <section class="fav-card">
         <img src="images/cloud.jpeg" />
-        <h5>Cloud Computing</h5>
+  
+        <section class="course-title">Cloud Computing</section>
+        <section class="stars">
         <ul>
           <li><ion-icon name="star"></ion-icon></li>
           <li><ion-icon name="star"></ion-icon></li>
           <li><ion-icon name="star"></ion-icon></li>
-          <li><ion-icon name="star-half"></ion-icon></li>
+          <li><ion-icon name="star"></ion-icon></li>
           <li><ion-icon name="star-outline"></ion-icon></li>
         </ul>
       </section>
+        
+      </section>
+
     </section>
+    
   </section>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
