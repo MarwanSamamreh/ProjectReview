@@ -194,7 +194,7 @@ button {
 .gallery {
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   margin: 25px 50px;
 }
 
@@ -339,7 +339,7 @@ footer ion-icon {
   z-index: -1;
   background-color: #333333;
   width: 100%;
-  height: 240px;
+  height: 230px;
 }
 .details-page {
   display: flex;
@@ -357,12 +357,15 @@ footer ion-icon {
 .details {
   color: #ffffff;
   padding: 20px 0;
-
-  width: 500px;
+  width: 450px;
 }
 
 .details h5 {
+  font-weight: 500;
   color: var(--brand-secondary);
+}
+.details p {
+  font-size: 14px;
 }
 
 .details ul {
@@ -373,26 +376,29 @@ footer ion-icon {
 .details ion-icon {
   font-size: 12px;
 }
-
+.lessons-container {
+  padding: 20px 0;
+}
 .lessons {
   background: var(--bg_default);
-  border: Solid 0.5px var(--lines-color);
-
+  border: Solid 1px var(--lines-color);
   border-left: solid 1px var(--lines-color);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: left;
-  width: 500px;
-  padding: 10px;
+  width: 450px;
+
   cursor: pointer;
   position: relative;
 }
-.lessons-container {
-  padding: 20px 0;
+.lessons-container h3 {
+  padding: 10px;
 }
+
 .lessons ion-icon {
-  margin-right: 15px;
+  padding: 10px;
+  margin-right: 10px;
   color: #03c180;
 }
 
@@ -612,16 +618,26 @@ footer ion-icon {
     margin: 0 50px;
   }
   .details {
-    width: 100%;
+    width: 320px;
   }
   .lessons-container {
     margin: 10px 0;
   }
   .lessons {
-    width: 100%;
+    justify-content: left;
+
+    width: 320px;
   }
+
+  .lessons p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+
   .grey-area {
-    height: 320px;
+    height: 290px;
     width: 100%;
   }
   .cta-card {
